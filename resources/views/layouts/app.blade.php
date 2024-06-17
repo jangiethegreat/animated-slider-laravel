@@ -18,7 +18,8 @@
         </nav>
     </header>
 
-    <script src="{{ asset('app.js') }}"></script>
+
+
     @yield('content')
 </body>
 
