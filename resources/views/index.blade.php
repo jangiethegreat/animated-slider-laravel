@@ -3,122 +3,38 @@
 @section('content')
 <div class="carousel">
     <div class="list">
+        @foreach ($carouselItems as $item)
         <div class="item">
-            <img src="{{ asset('images/1.jpg') }}">
+            <img src="{{ asset($item->image_path) }}">
             <div class="content">
-                <div class="author">JANG</div>
-                <div class="title">DESIGN SLIDER</div>
-                <div class="topic">PHILIPPINES</div>
-                <div class="des">
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit. In consequuntur error nulla asperiores consectetur! Quaerat illum recusandae ipsam animi et mollitia rerum ut repudiandae earum, reiciendis saepe ullam expedita dicta!
-                </div>
+                <div class="author">{{ $item->author }}</div>
+                <div class="title">{{ $item->title }}</div>
+                <div class="topic">{{ $item->topic }}</div>
+                <div class="des">{{ $item->description }}</div>
                 <div class="buttons">
                     <button>SEE MORE</button>
                     <button>SUBSCRIBE</button>
                 </div>
             </div>
         </div>
-
-        <div class="item">
-            <img src="{{ asset('images/2.jpg') }}">
-            <div class="content">
-                <div class="author">JANG</div>
-                <div class="title">DESIGN SLIDER</div>
-                <div class="topic">PHILIPPINES</div>
-                <div class="des">
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit. In consequuntur error nulla asperiores consectetur! Quaerat illum recusandae ipsam animi et mollitia rerum ut repudiandae earum, reiciendis saepe ullam expedita dicta!
-                </div>
-                <div class="buttons">
-                    <button>SEE MORE</button>
-                    <button>SUBSCRIBE</button>
-                </div>
-            </div>
-        </div>
-
-        <div class="item">
-            <img src="{{ asset('images/3.jpg') }}">
-            <div class="content">
-                <div class="author">JANG</div>
-                <div class="title">DESIGN SLIDER</div>
-                <div class="topic">PHILIPPINES</div>
-                <div class="des">
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit. In consequuntur error nulla asperiores consectetur! Quaerat illum recusandae ipsam animi et mollitia rerum ut repudiandae earum, reiciendis saepe ullam expedita dicta!
-                </div>
-                <div class="buttons">
-                    <button>SEE MORE</button>
-                    <button>SUBSCRIBE</button>
-                </div>
-            </div>
-        </div>
-
-        <div class="item">
-            <img src="{{ asset('images/4.jpg') }}">
-            <div class="content">
-                <div class="author">JANG</div>
-                <div class="title">DESIGN SLIDER</div>
-                <div class="topic">PHILIPPINES</div>
-                <div class="des">
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit. In consequuntur error nulla asperiores consectetur! Quaerat illum recusandae ipsam animi et mollitia rerum ut repudiandae earum, reiciendis saepe ullam expedita dicta!
-                </div>
-                <div class="buttons">
-                    <button>SEE MORE</button>
-                    <button>SUBSCRIBE</button>
-                </div>
-            </div>
-        </div>
+        @endforeach
     </div>
 
     <div class="thumbnail">
+        @foreach ($carouselItems as $item)
         <div class="item">
-            <img src="{{ asset('images/2.jpg') }}">
+            <img src="{{ asset($item->image_path) }}">
             <div class="content">
-                <div class="title">
-                    Name Slider
-                </div>
-                <div class="description">
-                    Description
-                </div>
+                <div class="title">{{ $item->title }}</div>
+                <div class="description">{{ $item->topic }}</div>
             </div>
         </div>
-        <div class="item">
-            <img src="{{ asset('images/3.jpg') }}">
-            <div class="content">
-                <div class="title">
-                    Name Slider
-                </div>
-                <div class="description">
-                    Description
-                </div>
-            </div>
-        </div>
-        <div class="item">
-            <img src="{{ asset('images/4.jpg') }}">
-            <div class="content">
-                <div class="title">
-                    Name Slider
-                </div>
-                <div class="description">
-                    Description
-                </div>
-            </div>
-        </div>
-        <div class="item">
-            <img src="{{ asset('images/1.jpg') }}">
-            <div class="content">
-                <div class="title">
-                    Name Slider
-                </div>
-                <div class="description">
-                    Description
-                </div>
-            </div>
-        </div>
+        @endforeach
     </div>
 
     <div class="arrows">
         <button id="prev"> ← </button>
         <button id="next"> → </button>
-
     </div>
     <div class="time"></div>
 </div>
