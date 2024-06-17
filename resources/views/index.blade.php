@@ -66,7 +66,62 @@
                 </div>
             </div>
         </div>
+    </div>
+
+    <div class="thumbnail">
+        <div class="item">
+            <img src="{{ asset('images/2.jpg') }}">
+            <div class="content">
+                <div class="title">
+                    Name Slider
+                </div>
+                <div class="description">
+                    Description
+                </div>
+            </div>
+        </div>
+        <div class="item">
+            <img src="{{ asset('images/3.jpg') }}">
+            <div class="content">
+                <div class="title">
+                    Name Slider
+                </div>
+                <div class="description">
+                    Description
+                </div>
+            </div>
+        </div>
+        <div class="item">
+            <img src="{{ asset('images/4.jpg') }}">
+            <div class="content">
+                <div class="title">
+                    Name Slider
+                </div>
+                <div class="description">
+                    Description
+                </div>
+            </div>
+        </div>
+        <div class="item">
+            <img src="{{ asset('images/1.jpg') }}">
+            <div class="content">
+                <div class="title">
+                    Name Slider
+                </div>
+                <div class="description">
+                    Description
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="arrows">
+        <button id="prev"> ← </button>
+        <button id="next"> → </button>
 
     </div>
+    <div class="time"></div>
 </div>
+<script src="{{ asset('app.js') }}"></script> <!-- Replace with correct path to your JavaScript -->
+
 @endsection
